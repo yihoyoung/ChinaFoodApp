@@ -24,7 +24,7 @@ document.addEventListener('deviceready', onDeviceReady, false);
 function onDeviceReady() {
 
     // var str_url = 'http://175.119.224.213:9000/';
-    var str_url = 'http:/175.119.224.213:9000/';
+    var str_url = 'https://cfomarket.store/';
     var ref = cordova.InAppBrowser.open(str_url, "_blank", "location=no,hardwareback=yes,zoom=yes,clearcache=no,fullscreen=no,toolbar=no,hidden=no");
 
     ref.show();
