@@ -21,23 +21,23 @@
 // See https://cordova.apache.org/docs/en/latest/cordova/events/events.html#deviceready
 document.addEventListener('deviceready', onDeviceReady, false);
 
-var location_url ='';
+var location_url = '';
 var ref;
 function onDeviceReady() {
 
-    // var str_url = 'http://175.119.224.213:9000/';
-    var str_url = 'https://cfomarket.store/';
+    var str_url = 'http://175.119.224.213:444/';
+    // var str_url = 'https://cfomarket.store/';
     // ref = cordova.InAppBrowser.open(str_url, "_blank", "location=no,hardwareback=yes,zoom=yes,clearcache=no,fullscreen=no,toolbar=no,hidden=no");
     ref = cordova.InAppBrowser.open(str_url, "_blank", "location=no,hardwareback=yes,zoom=yes,clearcache=no,fullscreen=no,toolbar=no,hidden=no");
 
-    ref.addEventListener("exit", function() {
+    ref.addEventListener("exit", function () {
 
-        console.log("exit="+location_url);
+        console.log("exit=" + location_url);
 
-        if(navigator.app) {
+        if (navigator.app) {
             navigator.app.exitApp();
         }
-        else if(navigator.device) {
+        else if (navigator.device) {
             navigator.device.exitApp();
         }
     });
